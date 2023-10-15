@@ -5,32 +5,35 @@
 .nav-item{
        letter-spacing:.2em;
        font-size:14px;
-       text-transform:12px;
+       text-transform:uppercase;
 
 }
 .dropdown-item{
              letter-spacing:.2em;
              font-size:14px;
-             text-transform:12px;
+             text-transform:uppercase;
 }
 .my_footer{
-      background-color:#f8f9fa;
-      height:60px;
+ background-color:#f8f9fa;
+ height:60px;
+}
+.navbar-collapse-bottom.my_footer{
+border-top:1px solid;
 }
 .my_footer p{
-      padding-top:20px;
-      font-size:14px;
+ padding-top:20px;
+ font-size:14px;
 }
 
 /*** category ***/
-.my row_class{
+.my_row_class{
 padding-top:15px;
 }
-.my row_class .mx_auto{
+.my_row_class .mx_auto{
 color:#000;
 font-size:12px;
 }
-.my-image{
+.my_image{
 width:100%;
 height:auto;
 }
@@ -39,7 +42,7 @@ font-size:16px;
 text-transform:uppercase;
 letter-spacing:.2em;
 }
-.my image_padding{
+.my_image_padding{
    padding:5px;
 }
 .my_bottom_margin{
