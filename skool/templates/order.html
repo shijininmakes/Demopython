@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+    <h2><center>Place an Order</center></h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <a href="{% url 'store:confirmation' %}" class="btn btn-primary">submit</a>
+    </form>
+
+
+
+{% endblock %}
+

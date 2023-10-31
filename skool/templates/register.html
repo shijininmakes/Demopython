@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<br>
+ <form method="post">
+        {% csrf_token %}
+        <label for="{{ form.username.id_for_label }}">Username:</label>
+        {{ form.username }}<br><br>
+
+        <label for="{{ form.password1.id_for_label }}">Password:</label>
+        {{ form.password1 }}<br><br>
+
+        <label for="{{ form.password2.id_for_label }}">Confirm Password:</label>
+        {{ form.password2 }}<br><br>
+
+          <a href="{% url 'store:login'  %}" class="btn btn-primary">submit</a>
+
+
+</form>
+
+{% endblock %}
+
+

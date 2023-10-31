@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<br>
+
+
+    <form method="post" action="{% url 'store:login' %}">
+        {% csrf_token %}
+            <label for="username">Username:</label>
+            <input type="text" class="form-control" id="username" name="username">
+            <label for="password">Password:</label>
+            <input type="password" class="form-control" id="password" name="password">
+        <br>
+        <a href="{% url 'store:order_form' %}" class="btn btn-primary">submit</a>
+           <p>Don't have an account? <a href="{% url 'store:register' %}">Register</a></p>
+    </form>
+
+{% endblock %}
