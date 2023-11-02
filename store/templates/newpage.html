@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New Page</title>
+
+<style>
+body{
+  font-family: Calibri, Helvetica, sans-serif;
+  background-color: aqua;
+}
+
+input[type=text], input[type=password], textarea {
+  width: 18%;
+  padding: 10px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+input[type=text]:focus, input[type=password]:focus {
+  background-color: orange;
+  outline: none;
+}
+ div {
+            padding: 10px 0;
+         }
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+button{
+  color: black;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 15%;
+  opacity: 0.9;
+  transition: width .35s;
+
+<!--}-->
+button::hover {
+  opacity: 1;
+}
+label{
+        width:100px;
+        display:inline-block;
+}
+email{
+    width:50%;
+    }
+option {
+  margin: 0.5em;
+}
+
+
+</style>
+</head>
+<body>
+<h1> New Page </h1>
+ <form action="{% url 'newpage' %}" method="POST" class="p-3 shadow">
+    {% csrf_token %}
+<!--     <div class="container">-->
+
+            <label><b>Name:</b></label>
+            <input type="text" placeholder="Enter your name" name="name" required><br>
+
+            <label><b>DOB:</b></label>
+            <input type="date" placeholder="Enter your DOB" name="DOB" required><br><br>
+
+            <label><b>Age:</b></label>
+            <input type="text" placeholder="Enter your age" name="Age" required><br>
+
+            <label><b>Gender:</b></label>
+            <input type="radio" id="gender" name="gender" value="male"/> Male
+            <input type="radio" id="gender" name="gender" value="female"/> Female <br><br>
+
+            <label><b>Phone Number:</b></label>
+            <input type="text" placeholder="Enter your Phone number" name="phone_number" required><br>
+
+            <label><b>Email:</b></label>
+            <input type="text" placeholder="Enter your email" name="email" required><br><br>
+
+            <label><b>Address :<br /><br /><br /><br /><br /></b></label>
+            <textarea cols="40" rows="3" placeholder="Current Address" name="address" required>
+            </textarea><br>
+
+            <label><b>Department:</b></label>
+
+                <select class="form-control" name="select1" id="select1">
+                    <option value="0" selected disabled>Select...</option>
+                <option value="1">Biology</option>
+                <option value="2">Computer Science</option>
+                <option value="3">Commerce</option>
+                <option value="4">Humanities</option>
+                  <option value="4">Economic</option>
+              </select>
+
+                <label><b>Course:</b></label>
+
+              <select class="form-control" name="select2" id="select2">
+                  <option value="0" selected disabled>---Select---</option>
+                <option value="1">Biology Science</option>
+                <option value="2">Home Science</option>
+                <option value="3">Accountancy</option>
+                <option value="4">Business studies</option>
+                  <option value="4">Statistics</option>
+                <option value="4">Electronics</option>
+                <option value="4">Computer Science</option>
+                  <option value="4"> Science</option>
+              </select>
+
+            <br><br>
+
+
+         <label><b>Purpose:</b></label>
+              <select class="form-control" name="select" id="select">
+                  <option value="0" selected disabled>Select</option>
+                  <option value="1">Enquiry</option>
+                <option value="2">Place Order</option>
+                <option value="3">Return</option>
+              </select>
+         <br><br>
+
+         <label><b>Materialsprovide:</b></label>
+
+            <ul class="unstyled centered">
+              <li>
+                <input class="styled-checkbox" id="styled-checkbox-1" type="checkbox" value="value1" checked>
+                <label for="styled-checkbox-1">Book</label>
+
+
+                <input class="styled-checkbox" id="styled-checkbox-2" type="checkbox" value="value2" checked>
+                <label for="styled-checkbox-2">Pen</label>
+
+
+                <input class="styled-checkbox" id="styled-checkbox-3" type="checkbox" value="value3" checked>
+                <label for="styled-checkbox-3">Papper</label>
+              </li>
+            </ul>
+<!--                     <button type="submit"> <a href="http://127.0.0.1:8000/msg/"></a> Submit </button>-->
+
+
+         <button type="submit" style="background-color:LightSeaGreen"> <a href="http://127.0.0.1:8000/msg/"></a><b> Submit</b> </button>
+<!--         <button type="submit" style="background-color:red"> <a href="/"></a><b> Logout</b> </button>-->
+<!--    </div>-->
+
+ </form>
+<a href="/"><button style="background-color:red">Logout</button></a>
+<!--         <button type="submit"> <a href="/"></a> Logout </button>-->
+
+</body>
+</html>
